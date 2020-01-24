@@ -16,6 +16,10 @@ namespace ConsoleAppTesting
             Box b3 = new Box { length = 4, breadth = 5 };
             Box b4 = new Box { length = 100, breadth = 100 };
 
+            ARTH2 aRTH2 = new ARTH2();
+            aRTH2.Sub(1, 1);
+            aRTH2.Add(12 ,1);
+            aRTH2.d
 
 
             Circle c = new Circle { radius = 5 };
@@ -134,4 +138,27 @@ namespace ConsoleAppTesting
     }
 
     
+
+    public partial class ARTH2 : IComparable
+    {
+        public int Add(int a, int b) => a + b;
+
+        public int CompareTo(object obj)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
+    public partial class ARTH2 : Arth<float>
+    {
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Sub(int a, int b) => a - b;
+    }
+
+
 }
