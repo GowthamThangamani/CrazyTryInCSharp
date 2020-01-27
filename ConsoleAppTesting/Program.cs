@@ -10,16 +10,28 @@ namespace ConsoleAppTesting
             Console.WriteLine("Hello World!");
 
 
+            PrintTheDoc printTheDoc = new PrintTheDoc();
+            printTheDoc.PrintReport(new HPPrinter());
+            printTheDoc.PrintReport(new LGPrinter());
+            GTCollection vs = new GTCollection();
+
 
             Box b1 = new Box { length = 2, breadth = 3 };
             Box b2 = new Box { length = 4, breadth = 5 };
+
+            Arth<Box> arth1 = new Arth<Box>();
+            var result = arth1.Add(b1,b2);
+            Console.WriteLine("Hello World!");
+            return;
+
+
             Box b3 = new Box { length = 4, breadth = 5 };
             Box b4 = new Box { length = 100, breadth = 100 };
 
             ARTH2 aRTH2 = new ARTH2();
             aRTH2.Sub(1, 1);
             aRTH2.Add(12 ,1);
-            aRTH2.d
+            //aRTH2.d
 
 
             Circle c = new Circle { radius = 5 };
@@ -92,7 +104,7 @@ namespace ConsoleAppTesting
         }
     }
 
-    public class Circle : CcColor
+    public class Circle 
     {
         public double radius;   // Length of a box
 
@@ -109,22 +121,7 @@ namespace ConsoleAppTesting
 
 
 
-    public  class CcColor 
-    {
-
-        public CcColor():base()
-        {
-
-        }
-
-        public static Color operator +(Color b, Color c)
-        {
-            Color box = new Color();
-
-            return box;
-        }
-    }
-
+    
 
     public class Arth<T>
     {
